@@ -1,16 +1,13 @@
 name: Generate code coverage badge
 
-# on:
-#   pull_request:
-#     branches:
-#       - main
-
-on: [push]
-
+on:
+  push:
+    branches:
+      - main
 
 jobs:
   test:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     name: Update coverage badge
     steps:
       - name: Checkout
